@@ -5,7 +5,7 @@
 
 <h3>What does it do?</h3>
 <p> If you checkout the docs on Semantic Release which you can find here https://semantic-release.gitbook.io/ . It is a fully automated version management and package publishing tool.
-It integrates with your gitlab reads all the commit messages you have made and determines the next semantic version number, generates a changelog and publishes the release.
+It integrates with your Gitlab, reads all the commit messages you have made and determines the next semantic version number, generates a changelog and publishes the release.
 It uses plugins to integrate with any package management system. </p>
 
 <p> I made a script that takes the next semantic version number and adds it to your version in pom.xml file. </p>
