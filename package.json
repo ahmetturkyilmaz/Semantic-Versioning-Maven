@@ -1,0 +1,22 @@
+{
+  "name": "semantic-version",
+  "version": "1.0.0",
+  "description": "semantic versioning tool",
+  "main": "version.js",
+  "dependencies": {
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@semantic-release/gitlab-config": "^8.0.0",
+    "semantic-release": "^17.1.1"
+  },
+  "scripts": {
+    "start": "node version.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:aangine/devops/semantic-version.git"
+  },
+  "author": "Ahmet Turkyilmaz",
+  "license": "ISC"
+}
