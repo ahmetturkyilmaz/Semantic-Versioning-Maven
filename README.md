@@ -11,7 +11,7 @@ It uses plugins to integrate with any package management system. </p>
 <p> I made a script that takes the next semantic version number and adds it to your version in pom.xml file. </p>
 
 <p>To use this you can just simply pull this repository in your Gitlab CI or Github CI yaml file. </p>
-<code>git pull https://github.com/ahmetturkyilmaz/Semantic-Versioning-Maven.git</code> 
+<code>git pull https://github.com/ahmetturkyilmaz/semantic-maven-versioning.git</code> 
 </br>
 <code>npm install --prefix Semantic-Versioning-Maven</code> 
 </br>
