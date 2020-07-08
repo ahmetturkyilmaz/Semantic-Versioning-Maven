@@ -2,15 +2,11 @@ const semanticRelease = require('semantic-release');
 const fs = require("fs");
 parseString = require("xml2js").parseString;
 xml2js = require("xml2js");
-console.log(process.env);
-console.log(process.env.CI_PROJECT_URL);
-console.log(process.env.CI_PROJECT_DIR);
 
 const mainFn = async () => {
     try {
         const result = await semanticRelease({
 
-            // Core options
             plugins: [
                 "@semantic-release/commit-analyzer",
                 "@semantic-release/gitlab"
@@ -24,14 +20,11 @@ const mainFn = async () => {
                 {name: 'alpha', prerelease: true}
             ],
             repositoryUrl: process.env.CI_PROJECT_URL,
-            // Plugin options
             gitlabUrl: 'https://gitlab.com',
             gitlabApiPathPrefix: '/api/v4'
         },
             {
-            // Run semantic-release from `/path/to/git/repo/root` without having to change local process `cwd` with `process.chdir()`
-            cwd: process.env.CI_PROJECT_DIR /*'/builds/aangine/capacity-service-capacity'*/,
-            // Pass the variable `MY_ENV_VAR` to semantic-release without having to modify the local `process.env`
+            cwd: process.env.CI_PROJECT_DIR ,
             env: {...process.env, GITLAB_TOKEN: process.env.GITLAB_TOKEN},
         });
         if (result) {
@@ -46,7 +39,6 @@ const mainFn = async () => {
             for (const release of releases) {
                 console.log(`The release was published with plugin "${release.pluginName}".`);
             }
-            //xml editor
             fs.readFile("../pom.xml", "utf-8", function (err, data) {
                 if (err) console.log(err);
                 console.log(data);

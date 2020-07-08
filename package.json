@@ -1,8 +1,17 @@
 {
   "name": "semantic-version",
   "version": "1.0.0",
-  "description": "semantic versioning tool",
+  "description": "semantic Versioning tool for Maven projects in Gitlab",
   "main": "version.js",
+  "author": "Ahmet Turkyilmaz <turkyilmazah@gmail.com>",
+  "keywords": [
+    "semantic-version",
+    "semantic-release",
+    "gitlab",
+    "gitlab-ci",
+    "maven",
+    "java"
+  ],
   "dependencies": {
     "xml2js": "^0.4.23"
   },
@@ -17,6 +26,5 @@
     "type": "git",
     "url": "git@gitlab.com:aangine/devops/semantic-version.git"
   },
-  "author": "Ahmet Turkyilmaz",
   "license": "ISC"
 }
